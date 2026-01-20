@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CF AI Chat Memory Assistant</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f7f7f7;
+      padding: 40px;
+    }
+    #chat {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    input, button {
+      padding: 8px;
+      margin-top: 10px;
+    }
+    #messages {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat">
+    <h2>Cloudflare AI Chat (Memory)</h2>
+    <div id="messages"></div>
+    <input id="input" placeholder="Say something..." />
+    <button onclick="send()">Send</button>
+  </div>
+
+  <script>
+    async function send() {
+      const input = document.getElementById("input");
+      const msg = input.value;
+      input.value = "";
+
+      const messages = document.getElementById("messages");
+      messages.innerHTML += `<p><b>You:</b> ${msg}</p>`;
+
+      messages.innerHTML += `<p><i>(Worker API not connected yet)</i></p>`;
+    }
+  </script>
+</body>
+</html>
