@@ -1,0 +1,14 @@
+name = "cf-ai-chat-memory-assistant"
+main = "index.ts"
+compatibility_date = "2024-12-01"
+
+[[durable_objects.bindings]]
+name = "CHAT_MEMORY"
+class_name = "ChatMemory"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["ChatMemory"]
+
+
+

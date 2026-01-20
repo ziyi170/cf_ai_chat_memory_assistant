@@ -1,0 +1,7 @@
+{
+  "name": "cf_ai_chat_memory_assistant",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "^3.30.0"
+  }
+}
